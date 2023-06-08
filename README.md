@@ -20,7 +20,7 @@ O projeto original foi feito pelo YouTuber [Filipe Deschamps](https://www.youtub
 
 Este projeto foi baseado em uma versão anterior que eu fiz ([aqui](https://github.com/1Marcuth/video-maker)) assistindo a série do [Filipe Deschamps](https://www.youtube.com/@FilipeDeschamps) porém com algumas alterações por conta que eu quis escrever um código mais moderno e não conseguia ter acesso à certas ferramentas como o *Watson*, *Algorithmia*, *Adobe After Effects* seja por indisponibilidade, requirimento de cartão de crédito ou por eu ter que pagar um software em si.
 <p align="center">
-    <img alt="My YouTube channel" src="https://media.discordapp.net/attachments/1042970956928397315/1116204275115245688/image.png">
+    <img alt="My YouTube channel" src="https://cdn.discordapp.com/attachments/1042970956928397315/1116385836699754558/image.png">
 </p>
 
 ---
@@ -68,7 +68,7 @@ Consulte a pasta de `utils` para conferir as outras funcionalidades.
 - [ ] Adicionar IA que gera imagens como o [Stable Diffuson](https://stablediffusionweb.com/) servir como um sergundo provedor de imagens.
 - [ ] Trocar provedor de geração de vozes por uma voz mais realista.
 - [ ] Transformar esse código JavaScript em código TypeScript.
-- [ ] Adicionar uma API de traduções para ser usada em cado se não encontrar uma página na língua desejada, pegando o coneúdo de uma página em outro idioma e traduzindo para o idioma desejado.
+- [ ] Adicionar uma API de traduções para ser usada em cado se não encontrar uma página da Wikipédia na língua desejada, pegando o coneúdo de uma página em outro idioma e traduzindo para o idioma desejado.
 
 ---
 
