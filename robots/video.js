@@ -8,6 +8,7 @@ import fs from "fs"
 
 const gm = GM.subClass({ imageMagick: true })
 
+import { choiceAtRandom } from "../utils/random.js"
 import createLogger from "../utils/logger.js"
 import state from "./state.js"
 
@@ -21,7 +22,7 @@ export default (async () => {
     logger.log("Starting...")
 
     await convertAllImages(content)
-    if (content.dynamicCaption) await createAllSentenceImages(content)
+    if (!content.dynamicCaption) await createAllSentenceImages(content)
     await createYouTubeThumbnail(content)
     await renderVideoWithVideoshow(content)
     
@@ -164,7 +165,17 @@ export default (async () => {
 
             }
 
-            const templateSetting = templateSettings[sentenceIndex]
+            let templateSetting
+
+            const templateSettingKeys = Object.keys(templateSettings)
+            const templateSettingLength = templateSettingKeys.length
+
+            if (sentenceIndex + 1 > templateSettingLength) {
+                const randomKey = choiceAtRandom(templateSettingKeys)
+                templateSetting = templateSettings[randomKey]
+            } else {
+                templateSetting = templateSettings[sentenceIndex]
+            }
 
             gm()
                 .out("-size", templateSetting.size)
