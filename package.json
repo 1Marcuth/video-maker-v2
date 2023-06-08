@@ -1,0 +1,34 @@
+{
+  "name": "video-maker",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@ffprobe-installer/ffprobe": "^1.4.1",
+    "axios": "^1.4.0",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "ffprobe": "^1.1.2",
+    "fluent-ffmpeg": "^2.1.2",
+    "gm": "^1.25.0",
+    "google-tts-api": "^2.0.2",
+    "googleapis": "^109.0.1",
+    "image-downloader": "^4.3.0",
+    "jimp": "^0.22.8",
+    "openai": "^3.2.1",
+    "progress": "^2.0.3",
+    "readline-sync": "^1.4.10",
+    "sbd": "^1.0.19",
+    "videoshow": "^0.1.12",
+    "wikipedia": "^2.1.0",
+    "zip-a-folder": "^1.1.6"
+  }
+}
