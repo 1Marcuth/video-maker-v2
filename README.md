@@ -11,7 +11,7 @@
 O projeto original foi feito pelo YouTuber [Filipe Deschamps](https://www.youtube.com/@FilipeDeschamps) em sua série de vídeos [4 robôs que criam vídeos no YouTube](https://www.youtube.com/watch?v=kjhu1LEmRpY&list=PLMdYygf53DP4YTVeu0JxVnWq01uXrLwHi) onde ele ensina passo a passo do zero de como criar os robôs.
 
 <p align="center">
-    <img alt="Video thumbnail" src="https://i.ytimg.com/vi/kjhu1LEmRpY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDq-VLwYXn6V5nPs8q-2aOD1QSetA">
+    <img alt="Video thumbnail" src="https://cdn.discordapp.com/attachments/1042970956928397315/1116386416159621222/68747470733a2f2f692e7974696d672e636f6d2f76692f6b6a6875314c456d5270592f68713732302e6a70673f7371703d2d6f61796d774563434f6743454d6f425346587971347170417734494152554141496843474146774163414242673d3d2672733d414f6e34434c44712d564c7759586e3656356e507338712d32614f44315153657441.png">
 </p>
 
 ---
