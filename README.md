@@ -1,4 +1,4 @@
-<h1 style="text-align: center;">Video Maker V2 - "Evolução"</h1>
+<h1 align="center" style="text-align: center;">Video Maker V2 - "Evolução"</h1>
 
 <p align="center">
     <img alt="Robot image" src="https://media.discordapp.net/attachments/1112536362411884664/1116188752038088704/image.png">
