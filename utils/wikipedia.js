@@ -1,20 +1,22 @@
 import wiki from "wikipedia"
 
-async function getContentFromWikipedia(pageName) {
-    const pageContent = {}
+async function getContentFromWikipedia(pageName, language) {
+    wiki.setLang(language)
 
     const page = await wiki.page(pageName)
 
-    pageContent.content = await page.content()
-    pageContent.images = await page.images()
-    pageContent.links = await page.links()
-    pageContent.pageid = page.pageid
-    pageContent.references = await page.references()
-    pageContent.summary = await page.summary()
-    pageContent.title = page.title
-    pageContent.url = page.fullurl
+    const content = {
+        content: await page.content(),
+        images: await page.images(),
+        links: await page.links(),
+        pageid: page.pageid,
+        references: await page.references(),
+        summary: await page.summary(),
+        title: page.title,
+        url: page.fullurl
+    }
 
-    return pageContent
+    return content
 }
 
 export default getContentFromWikipedia

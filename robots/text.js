@@ -65,7 +65,7 @@ export default (async () => {
     async function fetchWikipediaContent(content) {
         logger.log("Fetching content from Wikipedia...")
 
-        const pageData = await getContentFromWikipedia(content.searchTerm)
+        const pageData = await getContentFromWikipedia(content.searchTerm, content.language)
         content.sourceContentOriginal = pageData.content
 
         logger.log("Content with Wikipedia was successfully fetched!")
