@@ -130,5 +130,5 @@ Não se esqueça de criar uma pasta na raiz do projeto com o nome de `credential
 Fácil. Roda esse comando para começar:
 
 ```
-npm run start
+npm start
 ```
