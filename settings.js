@@ -32,13 +32,28 @@ const openaiModel = "text-davinci-003"
 
 const translations = {
     pt: {
-        credits: "Créditos"
+        credits: "Créditos",
+        prefixes: {
+            "The history of": "A história de",
+            "Who is": "Quem é",
+            "What is": "O que é"
+        }
     },
     en: {
-        credits: "Credits"
+        credits: "Credits",
+        prefixes: {
+            "The history of": "The history of",
+            "Who is": "Who is",
+            "What is": "What is"
+        }
     },
     es: {
-        credits: "Creditos"
+        credits: "Creditos",
+        prefixes: {
+            "The history of": "La historia de",
+            "Who is": "Quién es",
+            "What is": "Qué es"
+        }
     }
 }
 

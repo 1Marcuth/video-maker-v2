@@ -129,12 +129,12 @@ export default (async () => {
     async function uploadVideo(content) {
         const videoFilePath = path.join(currentDirectory, "..", "content", "new-project", "video.mp4")
         const videoFileSize = (await fs.promises.stat(videoFilePath)).size
-        const videoTitle = `${content.prefix} ${content.searchTerm}`
+        const videoTitle = `${translations[content.language].prefixes[content.prefix]} ${content.searchTerm}`
         const videoTags = [content.searchTerm, ...content.sentences[0].keywords]
         const sentences = content.sentences.map(sentence => sentence.text).join("\n\n")
         const credits = content.downlodedImages.join("- \n")
         const creditsTitle = translations[content.language]["credits"]
-        const videoDescription = `${sentences}\n\n${creditsTitle}: ${credits}`
+        const videoDescription = `${sentences}\n\n${creditsTitle}:\n${credits}`
 
         const requestParameters = {
             part: "snippet, status",
