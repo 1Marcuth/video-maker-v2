@@ -326,12 +326,18 @@ export default (async () => {
                         logger.log(`ffmpeg process started:${command}`)
                     })
                     .on("progress", (progress) => {
-                        if (bar.curr >= 72 && !alreadyFinishedTheFirstPart) {
-                            bar.tick(0)
-                            alreadyFinishedTheFirstPart = true
+                        if (!alreadyFinishedTheFirstPart) {
+                            if (bar.curr >= 72) {
+                                alreadyFinishedTheFirstPart = true
+                            }
                         }
-                        
-                        if (bar.curr === 100) return
+
+                        if (bar.curr >= 72) {
+                            if (alreadyFinishedTheFirstPart) {
+                                if (bar.curr >= 100) return
+                                return bar.tick(progress - 72)
+                            }
+                        }
 
                         bar.tick(progress)
                     })

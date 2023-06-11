@@ -3,12 +3,12 @@ import { fileURLToPath } from "url"
 import ProgressBar from "progress"
 import express from "express"
 import path from "path"
+import open from "open"
 import fs from "fs"
 
-import createLogger from "../utils/logger.js"
 import { runningIn, translations } from "../settings.js"
+import createLogger from "../utils/logger.js"
 import state from "./state.js"
-import { exec } from "child_process"
 
 const OAuth2 = google.auth.OAuth2
 const youtube = google.youtube({ version: "v3" })
@@ -52,8 +52,10 @@ export default (async () => {
         }
 
         async function createOAuthClient() {
+            const credentialsFilePath = path.join(currentDirectory, "..", "credentials", "google-youtube.json")
+
             const credentials = JSON.parse(
-                await fs.promises.readFile("credentials/google-youtube.json")
+                await fs.promises.readFile(credentialsFilePath)
             )
 
             const OAuthClient = new OAuth2(
@@ -74,18 +76,8 @@ export default (async () => {
             logger.log(`Please give your consent: ${consentUrl}`)
 
             if (runningIn === "local") {
-                const platform = process.platform
-
                 try {
-                    if (platform === "linux") {
-                        exec(`xdg-open ${consentUrl}`)
-                    } else if (platform === "win32") {
-                        exec(`start ${consentUrl}`)
-                    } else if (platform === "darwin") {
-                        exec(`open ${consentUrl}`)
-                    } else {
-                        logger.error("Unable to open the url, please try clicking or copying the url and opening it in your browser!")
-                    }
+                    await open(consentUrl)
                 } catch(error) {
                     logger.error(`An error occurred when trying to execute the command to open the url in your browser, please try clicking or copying the url and opening it in your browser! Error: ${error.message}`)
                 }
@@ -201,6 +193,6 @@ export default (async () => {
 
         await youtube.thumbnails.set(requestParameters)
 
-        console.log("> [youtube-robot] Thumbnail uploaded!")
+        logger.log("Thumbnail uploaded!")
     }
 })

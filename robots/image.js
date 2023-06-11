@@ -82,7 +82,7 @@ export default (async () => {
 
         const imagesUrl = response.data.items.map(item => item.link)
 
-        logger.log(`Got ${response.data.items.length} image links for query '${query}'!.`)
+        logger.log(`Got ${response.data.items.length} image links for query '${query}'.`)
 
         return imagesUrl
     }
@@ -128,9 +128,6 @@ export default (async () => {
         if (!fs.existsSync(imageDirPath)) {
             await fs.promises.mkdir(imageDirPath, { recursive: true })
         }
-
-        console.log(imageDirPath)
-        console.log(destFilePath)
 
         await imageDownloader.image({
             url: url,
