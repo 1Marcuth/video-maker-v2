@@ -66,7 +66,7 @@ Consulte a pasta de `utils` para conferir as outras funcionalidades.
 ### Ideias
 
 - [ ] Adicionar IA que gera imagens como o [Stable Diffuson](https://stablediffusionweb.com/) servir como um sergundo provedor de imagens.
-- [ ] Trocar provedor de geração de vozes por uma voz mais realista.
+- [x] Trocar provedor de geração de vozes por uma voz mais realista.
 - [ ] Transformar esse código JavaScript em código TypeScript.
 - [ ] Adicionar uma API de traduções para ser usada em cado se não encontrar uma página da Wikipédia na língua desejada, pegando o coneúdo de uma página em outro idioma e traduzindo para o idioma desejado.
 
