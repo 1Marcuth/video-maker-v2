@@ -3,8 +3,8 @@ import ffmpeg from "fluent-ffmpeg"
 import path from "path"
 import fs from "fs"
 
+import { createAudioFileWithAWSPolly, createAudioFileWithGoogleTTS } from "../utils/audio-creator.js"
 import { mergeAudios, changeAudioVolume, composeAudios, cutAudio } from "../utils/audio-editor.js"
-import createAudioFile from "../utils/audio-creator.js"
 import { choiceAtRandom } from "../utils/random.js"
 import createLogger from "../utils/logger.js"
 import state from "./state.js"
@@ -34,7 +34,7 @@ export default (async () => {
 
         for (let sentenceIndex = 0; sentenceIndex < sentences.length; sentenceIndex++) {
             const sentenceText = sentences[sentenceIndex].text
-            content.sentences[sentenceIndex].audioFilePath = await createSpeechAudioForSentence(sentenceIndex, sentenceText)
+            content.sentences[sentenceIndex].audioFilePath = await createSpeechAudioForSentence(content.text2speechProvider, sentenceIndex, sentenceText)
             content.sentences[sentenceIndex].duration = await new Promise((resolve, reject) => {
                 ffmpeg.ffprobe(content.sentences[sentenceIndex].audioFilePath, (error, metadata) => {
                     if (error) return reject(error)
@@ -43,15 +43,20 @@ export default (async () => {
             })
         }
 
-        async function createSpeechAudioForSentence(sentenceIndex, sentenceText) {
+        async function createSpeechAudioForSentence(text2speechProvider, sentenceIndex, sentenceText) {
             logger.log(`Creating speech audio for the index sentence: ${sentenceIndex}...`)
 
             const outputDirPath = path.join(currentDirectory, "..", "content", "new-project", "audios", "sentences")
             if (!fs.existsSync(outputDirPath)) await fs.promises.mkdir(outputDirPath, { recursive: true })
             const outputFileName = `${sentenceIndex}.mp3`
             const outputFilePath = path.join(outputDirPath, outputFileName)
-            await createAudioFile(sentenceText, outputFilePath, content.language)
 
+            if (text2speechProvider === "google-tts") {
+                await createAudioFileWithGoogleTTS(sentenceText, outputFilePath, content.language)
+            } else if (text2speechProvider === "aws-polly") {
+                await createAudioFileWithAWSPolly(sentenceText, outputFilePath, content.language)
+            }
+            
             logger.log(`Speech audio for the index sentence ${sentenceIndex} created as successfully!`)
 
             return outputFilePath
@@ -98,7 +103,7 @@ export default (async () => {
             logger.log("Manipulating and adjusting the music...")
 
             content.manipuledMusicFilePath = path.join(currentDirectory, "..", "content/new-project/audios", "music.mp3")
-            await changeAudioVolume(content.originalMusicFilePath, .05, content.manipuledMusicFilePath)
+            await changeAudioVolume(content.originalMusicFilePath, .10, content.manipuledMusicFilePath)
 
             logger.log("Music set successfully!")
         }

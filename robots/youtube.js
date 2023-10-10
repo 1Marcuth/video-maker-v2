@@ -126,8 +126,9 @@ export default (async () => {
         const sentences = content.sentences.map(sentence => sentence.text).join("\n\n")
         const credits = content.downlodedImages.join("- \n")
         const creditsTitle = translations[content.language]["credits"]
-        const videoDescription = `${sentences}\n\n${creditsTitle}:\n${credits}`
-
+        const videoDescriptionMaximumLength = 5000
+        const videoDescription = `${sentences}\n\n${creditsTitle}:\n${credits}`.slice(0, videoDescriptionMaximumLength)
+        
         const requestParameters = {
             part: "snippet, status",
             requestBody: {
@@ -164,7 +165,11 @@ export default (async () => {
         content.youtube = {
             video: {
                 id: videoId,
-                url: videoUrl
+                url: videoUrl,
+                description: videoDescription,
+                title: videoTitle,
+                tags: videoTags,
+                fileSize: videoFileSize
             }
         }
 

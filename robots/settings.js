@@ -1,17 +1,18 @@
 import readline from "readline-sync"
 
-import { contentProviders, languages, defaultSettings } from "../settings.js"
+import { contentProviders, languages, defaultSettings, text2speechProviders } from "../settings.js"
 import state from "./state.js"
 
 export default (() => {
     let content = {}
 
-    const WantToSetUp = askWantToSetUp()
+    const wantToSetUp = askWantToSetUp()
 
-    if (WantToSetUp) {
+    if (wantToSetUp) {
         content.language = askAndReturnLanguage()
         content.contentProvider = askAndReturnContentProvider()
         content.maximumSentences = askAndReturnMaximumSentences()
+        content.text2speechProvider = askAndReturnText2speechProvider()
         content.dynamicCaption = askAndReturnIfWantToUseDynamicCaption()
     } else {
         content = Object.assign(content, defaultSettings)
@@ -40,6 +41,12 @@ export default (() => {
     function askAndReturnMaximumSentences() {
         const maximumSentences = readline.questionInt("What is the maximum number of sentences? ")
         return maximumSentences
+    }
+
+    function askAndReturnText2speechProvider() {
+        const selectedText2speechProviderIndex = readline.keyInSelect(text2speechProviders, "Choose one content provider: ")
+        const selectedText2speechProviderText = text2speechProviders[selectedText2speechProviderIndex].toLowerCase()
+        return selectedText2speechProviderText
     }
 
     function askAndReturnIfWantToUseDynamicCaption() {

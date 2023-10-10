@@ -128,7 +128,7 @@ export default (async () => {
         if (content.sentences.length < minSentences) {
             logger.log(`Trying to break sentences with V2 because V1 generated only ${sentences.length} sentences!`)
 
-            breakContentIntoSentencesV2()
+            breakContentIntoSentencesV2(content)
 
             logger.log(`Obtained ${content.sentences.length} sentences with V2 sentence breaker!`)
         } else {

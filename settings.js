@@ -3,6 +3,9 @@ import dotenv from "dotenv"
 dotenv.config()
 
 const googleSearchEngineId = process.env.GOOGLE_SEARCH_ENGINE_ID
+const awsSecretAccessKey = process.env.AWS_SECRET_ACCESS_KEY
+const awsAccessKeyId = process.env.AWS_ACCESS_KEY_ID
+const awsRegion = process.env.AWS_REGION
 const runningIn = process.env.RUNNING_IN
 
 const apiKeys = {
@@ -28,6 +31,7 @@ const languagesSettings = {
 
 const languages = Object.keys(languagesSettings)
 const contentProviders = ["Wikipedia", "ChatGPT"]
+const text2speechProviders = ["AWS-Polly", "Google-TTS"]
 const openaiModel = "text-davinci-003"
 
 const translations = {
@@ -58,6 +62,7 @@ const translations = {
 }
 
 const defaultSettings = {
+    text2speechProvider: "google-tts",
     contentProvider: "wikipedia",
     maximumSentences: 7,
     language: "pt",
@@ -68,10 +73,14 @@ export {
     apiKeys,
     languages,
     runningIn,
+    awsRegion,
     openaiModel,
     translations,
+    awsAccessKeyId,
     defaultSettings,
     contentProviders,
     languagesSettings,
+    awsSecretAccessKey,
+    text2speechProviders,
     googleSearchEngineId
 }

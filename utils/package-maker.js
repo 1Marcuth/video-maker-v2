@@ -40,7 +40,6 @@ async function makePackage() {
         })
 
         if (deleteOriginalFolder) {
-            console.log("dasdasd")
             await fs.promises.rm(newPackageDirPath, { recursive: true })
         }
 

@@ -94,7 +94,10 @@ export default (async () => {
                         logger.error(`Error when trying to convert the image: ${inputFilePath}`)
                         logger.log(`Dropping image: ${inputFilePath}`)
 
-                        await deleteImage(inputFilePath)
+                        try {
+                            await deleteImage(inputFilePath)
+                        } catch(error) {}
+                        
 
                         content.sentences.splice(sentenceIndex, 1)
 
