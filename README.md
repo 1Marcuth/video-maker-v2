@@ -27,7 +27,7 @@ Este projeto foi baseado em uma versão anterior que eu fiz ([aqui](https://gith
 
 ### Novas funcionalidades
 
-- **Empacotamento:** Agora toda vez que terminar de criar um vídeo a pastar com os arquivos será compactada e liberará espaço para um novo vídeo ser criado.
+- **Empacotamento:** Agora toda vez que terminar de criar um vídeo a pasta com os arquivos será compactada e liberará espaço para um novo vídeo ser criado.
 - **Configuração:** Agora você pode configurar o bot para gerar conteúdos em outros idiomas e demais especificações.
 - **Voz sinterizada:** Como o pessoal já havia proposto em algum momento do desenvolvimento do projeto eu decidi implementar isso também.
 - **Google Trends:** Essa também o pessoal já havia proposto a implementação, aí eu também implementei aqui.
