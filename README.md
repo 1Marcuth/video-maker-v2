@@ -43,7 +43,7 @@ Agora por conta da voz sintética foi necessário criar um robô específico par
 
 ### Segurança
 
-Por motivos de sergurança optei por usar um aquivo `.env` para armazenar as chaves de API.
+Por motivos de sergurança optei por usar um aquivo `.env` para armazenar as chaves de API e outros quaisquer dados sensíveis ou de configuração.
 
 ---
 
