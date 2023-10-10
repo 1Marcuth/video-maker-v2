@@ -127,7 +127,7 @@ Não se esqueça de criar uma pasta na raiz do projeto com o nome de `credential
 
 ### Como criar vídeos?
 
-Fácil. Roda esse comando para começar:
+Fácil. Comece executando este comando para começar:
 
 ```
 npm start
