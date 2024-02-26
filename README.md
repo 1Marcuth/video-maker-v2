@@ -20,7 +20,7 @@ O projeto original foi feito pelo YouTuber [Filipe Deschamps](https://www.youtub
 
 Este projeto foi baseado em uma versão anterior que eu fiz ([aqui](https://github.com/1Marcuth/video-maker)) assistindo a série do [Filipe Deschamps](https://www.youtube.com/@FilipeDeschamps) porém com algumas alterações por conta que eu quis escrever um código mais moderno e não conseguia ter acesso à certas ferramentas como o *Watson*, *Algorithmia*, *Adobe After Effects* seja por indisponibilidade, requirimento de cartão de crédito ou por eu ter que pagar um software em si.
 <p align="center">
-    <img alt="My YouTube channel" src="[https://cdn.discordapp.com/attachments/1042970956928397315/1116385836699754558/image.png](https://cdn.discordapp.com/attachments/1042970956928397315/1116385836699754558/image.png?ex=65e9dad4&is=65d765d4&hm=0ab8b7a4ecb35c63f90a1a2791b8915a41d746fe95dc56d5cba5f472f4c16e2f&)">
+    <img alt="My YouTube channel" src="https://cdn.discordapp.com/attachments/1042970956928397315/1116385836699754558/image.png?ex=65e9dad4&is=65d765d4&hm=0ab8b7a4ecb35c63f90a1a2791b8915a41d746fe95dc56d5cba5f472f4c16e2f&">
 </p>
 
 ---
