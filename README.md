@@ -11,7 +11,7 @@
 O projeto original foi feito pelo YouTuber [Filipe Deschamps](https://www.youtube.com/@FilipeDeschamps) em sua série de vídeos [4 robôs que criam vídeos no YouTube](https://www.youtube.com/watch?v=kjhu1LEmRpY&list=PLMdYygf53DP4YTVeu0JxVnWq01uXrLwHi) onde ele ensina passo a passo do zero de como criar os robôs.
 
 <p align="center">
-    <img alt="Video thumbnail" src="https://cdn.discordapp.com/attachments/1042970956928397315/1116386416159621222/68747470733a2f2f692e7974696d672e636f6d2f76692f6b6a6875314c456d5270592f68713732302e6a70673f7371703d2d6f61796d774563434f6743454d6f425346587971347170417734494152554141496843474146774163414242673d3d2672733d414f6e34434c44712d564c7759586e3656356e507338712d32614f44315153657441.png">
+    <img alt="Video thumbnail" src="https://cdn.discordapp.com/attachments/1042970956928397315/1116386416159621222/68747470733a2f2f692e7974696d672e636f6d2f76692f6b6a6875314c456d5270592f68713732302e6a70673f7371703d2d6f61796d774563434f6743454d6f425346587971347170417734494152554141496843474146774163414242673d3d2672733d414f6e34434c44712d564c7759586e3656356e507338712d32614f44315153657441.png?ex=65e9db5f&is=65d7665f&hm=34b53db3a76d616d902c7706c9962c7a416478300bf76580b6eda479e0ec9a27&">
 </p>
 
 ---
@@ -20,7 +20,7 @@ O projeto original foi feito pelo YouTuber [Filipe Deschamps](https://www.youtub
 
 Este projeto foi baseado em uma versão anterior que eu fiz ([aqui](https://github.com/1Marcuth/video-maker)) assistindo a série do [Filipe Deschamps](https://www.youtube.com/@FilipeDeschamps) porém com algumas alterações por conta que eu quis escrever um código mais moderno e não conseguia ter acesso à certas ferramentas como o *Watson*, *Algorithmia*, *Adobe After Effects* seja por indisponibilidade, requirimento de cartão de crédito ou por eu ter que pagar um software em si.
 <p align="center">
-    <img alt="My YouTube channel" src="https://cdn.discordapp.com/attachments/1042970956928397315/1116385836699754558/image.png">
+    <img alt="My YouTube channel" src="[https://cdn.discordapp.com/attachments/1042970956928397315/1116385836699754558/image.png](https://cdn.discordapp.com/attachments/1042970956928397315/1116385836699754558/image.png?ex=65e9dad4&is=65d765d4&hm=0ab8b7a4ecb35c63f90a1a2791b8915a41d746fe95dc56d5cba5f472f4c16e2f&)">
 </p>
 
 ---
