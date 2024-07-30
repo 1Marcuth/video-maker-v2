@@ -81,7 +81,7 @@ Consulte a pasta de `utils` para conferir as outras funcionalidades.
 
 ## Exemplos
 
-Canal no YouTube com exemplos de vídeos gerados: https://www.youtube.com/@knowtheworldwithmarcuth
+Canal no YouTube com exemplos de vídeos gerados: https://www.youtube.com/
 
 ---
 
